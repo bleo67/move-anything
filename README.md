@@ -35,7 +35,7 @@ Join us on Discord: https://discord.gg/Zn33eRvTyK
 4. The installer is currently a bash script. On macos (and probably Linux) you can just paste this into a terminal:
 
 ```bash
-curl -L https://raw.githubusercontent.com/latenitecali/move-anything/main/installer/install.sh | sh
+curl -L https://raw.githubusercontent.com/bleo67/move-anything/main/installer/install.sh | sh
 ```
 
 And it'll download the latest build and install it on your Move.
@@ -99,7 +99,7 @@ An emulation of the Launch Pad Pro on the Ableton Move to be used with the Dirty
 
 3. To launch Beat Repeat mode, hold shift(...), press session (the arrow pointing left on the left of the move), then click the wheel to show the bottom half of the Move.
 
-4. All 9 knobs send MIDI CC's on channel 4. Poly aftertouch is mapped to CC1 on channel 4.
+4. All 9 knobs send MIDI CC's on channel 16. Poly aftertouch is mapped to CC1 on channel 16.
 
 5. To exit M8 control surface mode and go back to Move, hold shift(...) and click the jog wheel in.
 
