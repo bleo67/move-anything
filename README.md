@@ -66,7 +66,7 @@ If it's not working, you can get help in our Discord server: https://discord.gg/
 To remove Move Anything and restore the original state, run the below bash script:
 
 ```bash
-curl -L https://raw.githubusercontent.com/chaolue/move-anything/main/uninstall.sh | sh
+curl -L https://raw.githubusercontent.com/bleo67/move-anything/main/uninstall.sh | sh
 ```
 
 
