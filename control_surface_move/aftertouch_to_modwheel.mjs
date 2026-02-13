@@ -1,4 +1,4 @@
-export function aftertouchToModwheel(data, channel = 3) {
+export function aftertouchToModwheel(data, channel = 15) {
     if (!(data[0] === 0xa0)) {
         return false;
     }

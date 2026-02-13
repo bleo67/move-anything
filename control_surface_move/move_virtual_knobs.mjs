@@ -287,7 +287,7 @@ export function changeBank(index = 0) {
 }
 
 
-export function handleMoveKnobs(data, shiftHeld = false, channel = 3) {
+export function handleMoveKnobs(data, shiftHeld = false, channel = 15) {
     let knob = -1;
     let ccNumber = -1;
 

@@ -22,10 +22,10 @@ function yes_or_no {
 }
 
 install_pages=true
-url=https://github.com/latenitecali/move-anything/raw/main/
+url=https://github.com/bleo67/move-anything/raw/main/
 
 if [ "$1" = "local" ]; then
-  url="file:/Users/jonathan/Developer/music/move/move-anything/"
+  url="file:/Users/B/Documents/GitHub/move-anything/"
 fi
 
 filename=control_surface_move.tar.gz
