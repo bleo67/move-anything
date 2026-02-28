@@ -10,18 +10,18 @@ EOM
 # uncomment to debug
 # set -x
 
-function yes_or_no {
-    while true; do
-        read -p "$* [y/N]: " yn < /dev/tty
+# function yes_or_no {
+#     while true; do
+#         read -p "$* [y/N]: " yn < /dev/tty
 
-        case $yn in
-            [Yy]*) return 0  ;;
-            [Nn]*|"") return 1 ;;
-        esac
-    done
-}
+#         case $yn in
+#             [Yy]*) return 0  ;;
+#             [Nn]*|"") return 1 ;;
+#         esac
+#     done
+# }
 
-install_pages=true
+# install_pages=true
 url=https://github.com/bleo67/move-anything/raw/main/
 
 if [ "$1" = "local" ]; then
@@ -72,30 +72,30 @@ $ssh_root md5sum /opt/move/Move
 $ssh_root md5sum /opt/move/MoveOriginal
 $ssh_root md5sum /usr/lib/control_surface_move_shim.so
 
-if yes_or_no "Install 'Pages of Sets'?"; then
-
-  if $ssh_ableton "test ! -L ~/UserLibrary"; then
-    echo "Installing pages of sets..."
-    $ssh_ableton "mv ~/UserLibrary ~/UserLibrary_base"
-    
-    $ssh_ableton "/data/UserData/control_surface_move/changePage.sh 0 skipLaunch"
-    
-    $ssh_ableton "cp -a ~/UserLibrary_base/Sets/* ~/UserLibrary_0/Sets/"
-
-    
-  else
-    echo "Pages of Sets already installed!"
-  fi
-
-  echo
-  echo "Pages of Sets usage:"
-  echo " - To change pages, hold Shift and press the left (<) or right (>) arrow on the Move."
-  echo " - Changing pages restarts the current Live session."
-  echo " - Sets are per page; Samples/Recordings/Track Presets/Audio Effects are shared."
-  echo " - The web UI at http://move.local shows Sets for the current page."
-else
-    echo "Not installing Pages of Sets"
-fi
+# if yes_or_no "Install 'Pages of Sets'?"; then
+# 
+#   if $ssh_ableton "test ! -L ~/UserLibrary"; then
+#     echo "Installing pages of sets..."
+#     $ssh_ableton "mv ~/UserLibrary ~/UserLibrary_base"
+#     
+#     $ssh_ableton "/data/UserData/control_surface_move/changePage.sh 0 skipLaunch"
+#     
+#     $ssh_ableton "cp -a ~/UserLibrary_base/Sets/* ~/UserLibrary_0/Sets/"
+# 
+#     
+#   else
+#     echo "Pages of Sets already installed!"
+#   fi
+# 
+#   echo
+#   echo "Pages of Sets usage:"
+#   echo " - To change pages, hold Shift and press the left (<) or right (>) arrow on the Move."
+#   echo " - Changing pages restarts the current Live session."
+#   echo " - Sets are per page; Samples/Recordings/Track Presets/Audio Effects are shared."
+#   echo " - The web UI at http://move.local shows Sets for the current page."
+# else
+#     echo "Not installing Pages of Sets"
+# fi
 
 echo "Restating Move binary with shim installed..."
 
