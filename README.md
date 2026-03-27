@@ -18,7 +18,7 @@ Move Anything is a framework that lets you write your own code for the Ableton M
 
 
 ## Contributors
-@talktogreg, @impbox, @deets, @bobbyd, @chaolue
+@talktogreg, @impbox, @deets, @bobbyd, @chaolue, @latenitecali
 
 
 ## Community
